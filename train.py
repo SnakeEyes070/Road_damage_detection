@@ -12,7 +12,7 @@ def train_model(config_path='data.yaml', epochs=50, imgsz=416, batch=4):
     """
     Train YOLOv8 model on RDD2022 dataset
     """
-    print("🚀 Starting training for Crackathon submission...")
+    print(" Starting training for Crackathon submission...")
     
     # Load configuration
     with open(config_path, 'r') as f:
@@ -46,7 +46,7 @@ def train_model(config_path='data.yaml', epochs=50, imgsz=416, batch=4):
         verbose=True
     )
     
-    print("✅ Training completed!")
+    print(" Training completed!")
     print(f"Model saved to: runs/detect/crackathon_training/weights/best.pt")
     
     return results
@@ -59,4 +59,5 @@ if __name__ == "__main__":
     parser.add_argument('--batch', type=int, default=4, help='Batch size')
     
     args = parser.parse_args()
+
     train_model(args.config, args.epochs, args.imgsz, args.batch)
