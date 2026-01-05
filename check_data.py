@@ -11,7 +11,7 @@ def check_one_sample():
     # 2. Get first image file
     img_files = os.listdir(train_img_dir)
     if not img_files:
-        print("❌ No images found! Check your data path.")
+        print(" No images found! Check your data path.")
         return
     
     first_image = img_files[0]
@@ -69,11 +69,12 @@ def check_one_sample():
     plt.show()
     
     # 6. Quick dataset stats
-    print(f"\n📊 Quick stats:")
+    print(f"\n Quick stats:")
     print(f"   Total training images: {len(img_files)}")
     print(f"   Total label files: {len(os.listdir(train_label_dir))}")
     
     return True
 
 if __name__ == "__main__":
+
     check_one_sample()
