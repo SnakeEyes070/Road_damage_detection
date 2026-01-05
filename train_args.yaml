@@ -19,5 +19,6 @@ names:
 "@ | Out-File -FilePath "data.yaml" -Encoding utf8
 
 # Confirm the file was created
-Write-Host "✅ File 'data.yaml' created in:" -ForegroundColor Green
+Write-Host " File 'data.yaml' created in:" -ForegroundColor Green
+
 Get-Item "data.yaml" | Select-Object FullName
