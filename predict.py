@@ -61,7 +61,7 @@ def generate_correct_predictions():
             # Add to zip without folder structure
             zipf.write(txt_file, txt_file.name)
     
-    print("\n✅ DONE!")
+    print("\n DONE!")
     print(f"Predictions saved in: {pred_dir}/")
     print(f"Submission file: submission.zip")
     
@@ -107,13 +107,13 @@ def verify_predictions():
                         errors.append(f"{txt_file.name}: Line {i+1} invalid confidence")
     
     if errors:
-        print("\n❌ ERRORS FOUND:")
+        print("\n ERRORS FOUND:")
         for error in errors[:10]:  # Show first 10 errors
             print(f"  {error}")
         if len(errors) > 10:
             print(f"  ... and {len(errors)-10} more errors")
     else:
-        print("\n✅ All prediction files have correct format (6 values per line)")
+        print("\n All prediction files have correct format (6 values per line)")
 
 if __name__ == "__main__":
     print("="*60)
@@ -122,4 +122,5 @@ if __name__ == "__main__":
     print("="*60)
     
     generate_correct_predictions()
+
     verify_predictions()
