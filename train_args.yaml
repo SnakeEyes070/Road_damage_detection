@@ -1,0 +1,23 @@
+# Create the data.yaml file in D:\Crackthon
+@"
+# Dataset Configuration for Crackathon
+path: D:/Crackthon/data
+train: train/images
+val: val/images
+test: test/images
+
+# Number of classes
+nc: 5
+
+# Class names (MUST match the label mapping: 0 to 4)
+names: 
+  0: Longitudinal crack
+  1: Transverse crack
+  2: Alligator crack
+  3: Other corruption
+  4: Pothole
+"@ | Out-File -FilePath "data.yaml" -Encoding utf8
+
+# Confirm the file was created
+Write-Host "✅ File 'data.yaml' created in:" -ForegroundColor Green
+Get-Item "data.yaml" | Select-Object FullName
