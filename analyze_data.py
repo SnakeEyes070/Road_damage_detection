@@ -83,12 +83,12 @@ def analyze_class_distribution():
     print("="*50)
     
     if imbalance_ratio > 10:
-        print("⚠️  HIGH IMBALANCE DETECTED!")
+        print("  HIGH IMBALANCE DETECTED!")
         print("   → You MUST use class-weighted loss in training.")
         print("   → Focus augmentation on '{class_names[least_common_class]}'.")
     
     if class_counter[4] < 1000:  # Pothole threshold
-        print("⚠️  POTHOLE CLASS IS VERY RARE!")
+        print("  POTHOLE CLASS IS VERY RARE!")
         print("   → Consider mosaic/mixup augmentation specifically for potholes.")
     
     print("   → For 'Other Corruption': Use diverse augmentation (blur, noise, contrast).")
@@ -98,4 +98,5 @@ def analyze_class_distribution():
 
 # Run the analysis
 if __name__ == "__main__":
+
     analyze_class_distribution()
