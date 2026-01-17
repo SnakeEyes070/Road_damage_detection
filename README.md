@@ -29,7 +29,7 @@ Crackthon/
 # Create and activate virtual environment
 python -m venv crackathon_env
 crackathon_env\Scripts\activate  # Windows
-# source crackathon_env/bin/activate  # Linux/Mac
+# source crackathon_env/bin/activate  # 
 
 # Install dependencies
 pip install ultralytics==8.3.246 torch==2.5.1+cu121 torchvision==0.20.1+cu121
